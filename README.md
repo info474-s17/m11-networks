@@ -1,21 +1,10 @@
-# Module 11: Networks (Force Directed Layouts)
+# Networks
 
-## Overview
 In this module, we'll look at D3's approach for building network visualizations. While there are many ways of visualizing networks ([adjacency matrices](https://bost.ocks.org/mike/miserables/), [hive plots](https://bost.ocks.org/mike/hive/), [dendrograms](https://bl.ocks.org/mbostock/4063570), etc.), this module focuses on methods for explicitly visualizing network graphs.
 
 If you prefer watching entertaining videos to reading tutorials, I suggest you watch [this talk](https://www.youtube.com/watch?v=Mucmb33711A&list=PLlgxAbM67lYIQ5jid9cXsm72wEpHhAnyb&index=8) by [Jim Vallandingham](http://vallandingham.me/), which captures and explains these ideas incredibly well.
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Contents**
 
-- [Resources](#resources)
-- [Network Data](#network-data)
-- [High-level View](#high-level-view)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-## Resources
-Here are a few resources to help you better understand network graphs:
+Helpful links:
 
 - [Force Layout](https://github.com/mbostock/d3/wiki/Force-Layout) _(D3 Wiki)_
 - [Abusing the Force](https://www.youtube.com/watch?v=Mucmb33711A&list=PLlgxAbM67lYIQ5jid9cXsm72wEpHhAnyb&index=8) _(Vallandingham, OVC Video)_
@@ -31,7 +20,7 @@ Before we talk about **visualizing** network data, we should briefly discuss the
 
 Below is a simple dataset that captures relationships between elements, and an example of how that data could be represented in a graph. Open up [demo-1](demo-1) to interactively edit the underlying dataset (note, the implementation is imperfect).
 
-![screenshot of node and link data with graph](imgs/demo-1.png)
+![screenshot of node and link data with graph](m16-imgs/demo-1.png)
 
 ## Force-Directed Layout Overview
 In order to understand the methods below, you must first understand _**what is actually happening**_ when D3 builds a network visualization. Unlike other layouts in which we have explicit position for underlying data values, network visualizations do not have a single solution for expressing the elements in the dataset and all of their connections. Building a network visualization is an attempt to meet certain aesthetic constraints in a rendering area, such as:
